@@ -1,0 +1,67 @@
+html {
+  font-family: 'Shippori Mincho', serif;
+}
+* {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+
+}
+/* navbar */
+.navbar {
+  display: flex;
+  flex: row;
+  justify-content: space-between;
+  padding: 30px;
+  color:#f48847 ;
+  background-color: rgb(40,45,48) ;
+}
+.navbar  a {
+  color: #f48847;
+}
+.nav-left {
+  font-size: 18px;
+  font-weight: 300;
+  width: 33%;
+  text-align: left;
+  padding-top: 15px;
+}
+.nav-left > a {
+padding: 15px 10px;
+}
+.nav-center {
+  width: 33%;
+  text-align: center;
+  font-size: 31px;
+  font-weight: 500;
+}
+.nav-right {
+  width: 33%;
+  font-size: 18px;
+  font-weight: 300;text-align: right;
+}
+.nav-right > i {
+  padding: 15px;
+}
+/* header  */
+.header {
+  background-color:rgb(40,45,48) ;
+  text-align: center;
+  padding: 80px 20px;
+}
+.main-title {
+  font-size: 60px;
+  color: #f48847;
+}
+.description {
+  padding-top: 40px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 300;
+  font-family: 'Merriweather', serif !important;
+}
+.header-img {
+  padding: 130px 0px;
+  width: 95%;
+}
