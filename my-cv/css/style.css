@@ -8,6 +8,11 @@
   --number-current-session-color: #c6646b;
   --info-title-color: #f37b83;
   --info-content-color: #faefff;
+  --background-color-services: #302729;
+  --session-title-color: #f37b83;
+  --session-content-color: #a88590;
+  --session-content-hover: #faefff;
+  --service-detail-background-color: #362a2e;
 }
 * {
   padding: 0;
@@ -17,8 +22,8 @@
 }
 /* session   */
 .session {
-  height: 100vh;
   padding-left: 4%;
+  padding-top: 6%;
 }
 /* content-left - pagination */
 .content-left {
@@ -117,6 +122,8 @@
   justify-content: center;
   flex-wrap: wrap;
   background-color: var(--background-color-home-content-left);
+  height: 100vh;
+  padding-top: 0;
 }
 
 /* content-right */
@@ -175,7 +182,51 @@
   height: 100%;
   object-fit: cover;
 }
-
+/* services */
+.services {
+  background-color: var(--background-color-services);
+  height: auto;
+  display: flex;
+}
+.service-detail-wrapper {
+  width: 55%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.service-description-wrapper {
+  width: 45%;
+}
+.service-detail {
+  width: 44%;
+  margin: 0 6% 6% 0;
+  padding: 7%;
+  background-color: var(--service-detail-background-color);
+}
+.service-detail img {
+  width: 50%;
+  object-fit: contain;
+  margin-bottom: 4%;
+}
+.session-detail-des {
+  margin-top: 3%;
+  color: var(--session-content-color);
+  transition: all 0.2s ease-in-out;
+}
+.session-detail-des:hover {
+  color: var(--session-content-hover);
+}
+.session-info {
+  font-size: 22px;
+  line-height: 35px;
+  margin-bottom: 4%;
+  color: var(--session-content-color);
+}
+.session-title {
+  color: var(--session-title-color);
+  margin-bottom: 5%;
+  font-size: 30px;
+  font-size: 2.26vw;
+}
 /* responsive */
 
 /* Extra large devices (large desktops, 1200px and up) */
