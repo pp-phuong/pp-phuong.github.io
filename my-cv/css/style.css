@@ -5,6 +5,9 @@
   --title-color-light-pink: #f37b83;
   --content-color-light-pink: #a88590;
   --toggle-menu-color: #fff;
+  --number-current-session-color: #c6646b;
+  --info-title-color: #f37b83;
+  --info-content-color: #faefff;
 }
 * {
   padding: 0;
@@ -28,7 +31,8 @@
   padding-left: 4%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
+  color: var(--toggle-menu-color);
 }
 .nav-toggle {
   height: 23px;
@@ -38,6 +42,7 @@
   align-items: center;
   position: relative;
   transition: 0.5s;
+  transform: translateX(-100%);
 }
 .nav-toggle:hover {
   justify-content: flex-end;
@@ -64,6 +69,46 @@
   height: 3px;
   background-color: var(--toggle-menu-color);
   transition: 0.5s;
+}
+/* pagination */
+.top-pagination {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: 700;
+}
+.pagination-line {
+  width: 33%;
+  height: 3px;
+  margin: 0 3%;
+  background-color: var(--toggle-menu-color);
+}
+.current-session {
+  color: var(--number-current-session-color);
+}
+.my-info {
+  margin-bottom: 10%;
+}
+.my-info-title {
+  text-transform: uppercase;
+  color: var(--info-title-color);
+  letter-spacing: 5px;
+  font-size: 12px;
+  font-size: 0.9vw;
+}
+.my-info-content {
+  color: var(--info-content-color);
+  line-height: 30px;
+  font-weight: 500;
+}
+.signature {
+  margin-right: 15%;
+  padding: 18% 0 4% 0;
+}
+.signature img {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
 }
 /* session 1 - home */
 
@@ -109,9 +154,9 @@
 }
 .home-social {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: 8% 9% 0 0;
-
   font-size: 12px;
   line-height: 30px;
   letter-spacing: 5px;
@@ -145,11 +190,26 @@
     position: fixed;
     top: 0;
     left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
   .content-right {
     width: 100%;
     margin-left: 0;
     margin-top: 55px;
+  }
+  .top-pagination {
+    justify-content: flex-end;
+    padding-right: 4%;
+    width: 30%;
+  }
+  .information {
+    display: none;
+  }
+  .nav-toggle {
+    transform: translateX(0);
   }
 }
 
@@ -172,6 +232,12 @@
   }
   .home-content-left {
     width: 100%;
+  }
+  .home {
+    padding: 10%;
+  }
+  .top-pagination {
+    width: 80%;
   }
 }
 
