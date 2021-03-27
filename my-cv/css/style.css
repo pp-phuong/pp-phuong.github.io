@@ -2,17 +2,16 @@
   --background-color-content-left: #362b2e;
   --background-color-home-content-left: #f9f0ff;
   --content-color-dark-black: #492d31;
-  --title-color-light-pink: #f37b83;
   --content-color-light-pink: #a88590;
   --toggle-menu-color: #fff;
   --number-current-session-color: #c6646b;
-  --info-title-color: #f37b83;
-  --info-content-color: #faefff;
+  --title-color: #f37b83;
+  --content-color: #faefff;
   --background-color-services: #302729;
-  --session-title-color: #f37b83;
   --session-content-color: #a88590;
   --session-content-hover: #faefff;
   --service-detail-background-color: #362a2e;
+  --font-size-content: 15px;
 }
 * {
   padding: 0;
@@ -20,10 +19,41 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+button {
+  display: inline;
+}
+a {
+  text-decoration: none;
+  color: var(--content-color);
+}
+a:focus {
+  outline: none;
+}
 /* session   */
 .session {
   padding-left: 4%;
   padding-top: 6%;
+}
+.session-detail-des {
+  margin-top: 6%;
+  color: var(--session-content-color);
+  transition: all 0.2s ease-in-out;
+  line-height: 30px;
+}
+.session-detail-des:hover {
+  color: var(--session-content-hover);
+}
+.session-info {
+  font-size: 22px;
+  line-height: 35px;
+  margin-bottom: 4%;
+  color: var(--session-content-color);
+}
+.session-title {
+  color: var(--title-color);
+  margin-bottom: 5%;
+  font-size: 30px;
+  font-size: 2.26vw;
 }
 /* content-left - pagination */
 .content-left {
@@ -46,7 +76,7 @@
   justify-content: flex-start;
   align-items: center;
   position: relative;
-  transition: 0.5s;
+  transition: linear 1s ease-in-out;
   transform: translateX(-100%);
 }
 .nav-toggle:hover {
@@ -59,7 +89,7 @@
   background-color: var(--toggle-menu-color);
   position: absolute;
   top: 0;
-  transition: 0.5s;
+  transition: linear 1s ease-in-out;
 }
 .nav-toggle::after {
   content: '';
@@ -73,7 +103,7 @@
   width: 13px;
   height: 3px;
   background-color: var(--toggle-menu-color);
-  transition: 0.5s;
+  transition: linear 1s ease-in-out;
 }
 /* pagination */
 .top-pagination {
@@ -96,13 +126,13 @@
 }
 .my-info-title {
   text-transform: uppercase;
-  color: var(--info-title-color);
+  color: var(--title-color);
   letter-spacing: 5px;
   font-size: 12px;
   font-size: 0.9vw;
 }
 .my-info-content {
-  color: var(--info-content-color);
+  color: var(--content-color);
   line-height: 30px;
   font-weight: 500;
 }
@@ -145,7 +175,7 @@
   margin-bottom: 7.3%;
 }
 .home-title {
-  color: var(--title-color-light-pink);
+  color: var(--title-color);
   font-size: 100px;
   font-size: 7.5vw;
   line-height: 94px;
@@ -154,7 +184,7 @@
 }
 .home-description {
   color: var(--content-color-light-pink);
-  font-size: 15px;
+  font-size: var(--font-size-content);
   margin: 5.5% 9% 5.5% 0;
   word-break: keep-all;
   line-height: 30px;
@@ -207,25 +237,33 @@
   object-fit: contain;
   margin-bottom: 4%;
 }
-.session-detail-des {
-  margin-top: 3%;
-  color: var(--session-content-color);
-  transition: all 0.2s ease-in-out;
+
+.service-group-btn {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 4%;
+  font-size: var(--font-size-content);
+
+  /* place-items: center center; */
 }
-.session-detail-des:hover {
-  color: var(--session-content-hover);
+.service-group-btn button {
+  color: var(--content-color);
+  border: 2px solid var(--title-color);
+  background-color: transparent;
+  text-align: center;
+  padding: 12px 38px;
+  cursor: pointer;
+  vertical-align: middle;
+  text-decoration: none;
+  border-radius: 59px;
+  transition: all 0.2s linear;
+  margin: 6% 6% 0 0;
+  width: fit-content;
+  font-size: 100%;
 }
-.session-info {
-  font-size: 22px;
-  line-height: 35px;
-  margin-bottom: 4%;
-  color: var(--session-content-color);
-}
-.session-title {
-  color: var(--session-title-color);
-  margin-bottom: 5%;
-  font-size: 30px;
-  font-size: 2.26vw;
+.service-group-btn button:hover {
+  color: var(--content-color);
+  background-color: var(--title-color);
 }
 /* responsive */
 
